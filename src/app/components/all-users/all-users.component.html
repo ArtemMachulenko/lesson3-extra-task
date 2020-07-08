@@ -1,0 +1,33 @@
+<h2>User:</h2>
+<div>
+  <p><b>id:</b> {{user?.id}}</p>
+  <p><b>name:</b> {{user?.name}}</p>
+  <p><b>username:</b> {{user?.username}}</p>
+  <p><b>email:</b> {{user?.email}}</p>
+  <p><b>phone:</b> {{user?.phone}}</p>
+  <p><b>website:</b> {{user?.website}}</p>
+  <h3>Address:</h3>
+  <p><b>street:</b> {{user?.address.street}}</p>
+  <p><b>suite:</b> {{user?.address.suite}}</p>
+  <p><b>city:</b> {{user?.address.city}}</p>
+  <p><b>zipcode:</b> {{user?.address.zipcode}}</p>
+  <h3>Geo:</h3>
+  <p><b>lat:</b> {{user?.address.geo.lat}}</p>
+  <p><b>lng:</b> {{user?.address.geo.lng}}</p>
+  <h3>Company:</h3>
+  <p><b>company name:</b> {{user?.company.name}}</p>
+  <p><b>catchPhrase:</b> {{user?.company.catchPhrase}}</p>
+  <p><b>bs:</b> {{user?.company.bs}}</p>
+</div>
+<h3>User posts:</h3>
+<div>
+  <ul *ngFor="let post of posts">
+    <li>
+      <h4>Post: {{post?.id}}</h4>
+      <p><b>Title:</b> {{post?.title}}</p>
+      <p>{{post?.body}}</p>
+      <button type="button" (click)="getCommentsByPostId(post?.id)">Comments</button>
+    </li>
+  </ul>
+</div>
+
