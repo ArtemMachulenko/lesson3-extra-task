@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lesson3-extra-task"
+    }
+  },
+  "defaultProject": "lesson3-extra-task",
+  "cli": {
+    "analytics": "1a1e5d4b-0657-4fb1-a8b6-20b7a64d590a"
+  }
 }
